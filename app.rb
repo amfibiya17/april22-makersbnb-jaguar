@@ -4,21 +4,21 @@ require 'sinatra/reloader'
 class App < Sinatra::Base
   enable :sessions
 
-  get '/' do
-    redirect to '/signup'
-  end
+  # get '/' do
+  #   redirect to '/signup'
+  # end
   
-  get '/signup' do
+  # get '/signup' do
    
-  end
+  # end
 
-  post '/signup' do
+  # post '/signup' do
   
-  end
+  # end
   
-  post '/login' do
+  # post '/login' do
 
-  end
+  # end
 
   get '/rent_or_list' do
  
@@ -27,10 +27,22 @@ class App < Sinatra::Base
   post '/rent_or_list' do
 
   end
-
-  post '/logout' do
   
+  get '/list' do
+    
   end
+  
+  post '/list' do
+    redirect to '/rent_or_list'
+  end
+  
+  get '/rent' do
+
+  end
+
+  # post '/logout' do
+  
+  # end
 
   run! if app_file == $0
 end
