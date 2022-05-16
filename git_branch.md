@@ -45,10 +45,10 @@ git push origin mybranch
 However we probably need to do this on Github as we are wanting to create pull requests and check the work first
 
 ```
-git checkout master   (first switch to the master branch)
-$ git merge mybranch    (merge all changes from mybranch into the master branch)
-$ gid add <file>        (fix and add any conflicts)
-$ git commit -m 'merged changes'
+git checkout main   (first switch to the main branch)
+git merge mybranch    (merge all changes from mybranch into the main branch)
+gid add <file>        (fix and add any conflicts)
+git commit -m 'merged changes'
 ```
 
 ### Deleting a Branch
