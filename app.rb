@@ -20,21 +20,21 @@ class App < Sinatra::Base
 
   # end
 
-  get '/rent_or_list' do
- 
+  get '/selection' do
+    erb :selection
   end
 
-  post '/rent_or_list' do
+  post '/selection' do
 
   end
   
-  get '/list' do
+  # get '/list' do
     
-  end
+  # end
   
-  post '/list' do
-    redirect to '/rent_or_list'
-  end
+  # post '/list' do
+  #   redirect to '/selection'
+  # end
   
   get '/rent' do
 
