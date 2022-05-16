@@ -82,7 +82,6 @@ As a user <br>
 So I know which home to book for my holiday<br>
 Unavailable dates should not appear
 <br>
-<br>
 As a site administrator <br>
 To ensure choice and first come first serve<br>
 A home will remain available until abooking request is confirmed<br>
