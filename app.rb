@@ -27,14 +27,7 @@ class App < Sinatra::Base
   post '/selection' do
     
   end
-  
-  # get '/list' do
-    
-  # end
-  
-  # post '/list' do
-  #   redirect to '/selection'
-  # end
+
   
   get '/homes' do
     erb :homes
@@ -46,6 +39,15 @@ class App < Sinatra::Base
   # post '/logout' do
   
   # end
+
+  get '/list' do
+    erb :list
+  end
+
+  post '/list' do
+    redirect to '/selection'
+  end
+
 
   run! if app_file == $0
 end
