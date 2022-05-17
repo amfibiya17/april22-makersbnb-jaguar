@@ -25,7 +25,7 @@ class App < Sinatra::Base
   end
 
   post '/selection' do
-
+    
   end
   
   # get '/list' do
@@ -36,9 +36,9 @@ class App < Sinatra::Base
   #   redirect to '/selection'
   # end
   
-  get '/rent' do
+  # get '/rent' do
 
-  end
+  # end
 
   # post '/logout' do
   
