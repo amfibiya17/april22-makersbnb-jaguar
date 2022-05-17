@@ -45,7 +45,7 @@ body {
 }
 
 .list_home a:before {
-  content: "LIST HOME";
+  content: "LIST A HOME";
   position: absolute;
   height: 65px;
   width: 220px;
@@ -59,7 +59,7 @@ body {
 
 .list_home a:after{
   position: absolute;
-  content: "LIST HOME";
+  content: "LIST A HOME";
   height: 65px;
   width: 220px;
   display: flex;
