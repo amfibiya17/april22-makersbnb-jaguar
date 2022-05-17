@@ -1,22 +1,33 @@
 <html>
 
-  <style>
-    div {
-      border: 1px solid red;
-    }
-  </style> 
+  <head>
+    <title>MakerBnB</title>
+    <link href="<%= url('/styles_selection.css') %>" rel="stylesheet" type="text/css" />
+  </head>
 
-  <div><a href="/homes">Homes</a></div>
-  <div><a href="/list">List a home</a></div>
-  <div><a href="/profile">Profile</a></div>
-  <div><a href="/login">Sign out</a></div>
+  <header>
 
+    <div class="header">
+      <span class="homes"><a name="HOMES" type="text" href="/homes" value="HOMES">HOMES</a></span>
+      <span class="list_home"><a name="LIST A HOME" type="text" href="/list" value="LIST A HOME">LIST A HOME</a></span>
+      <span class="profile"><a name="PROFILE" type="text" href="/profile" value="PROFILE">PROFILE</a></span>
+      <span class="sign_out"><a name="SIGN OUT" type="text" href="/login" value="HOMES">SIGN OUT</a></span>
+    </div>
+    
+  </header>
 
-  <form action="/homes" method="post">
-    <div><button name="Rent" type="text">Rent</button></div>
-  </form>
+  <body>
 
-  <form action="/list" method="post">
-    <div><button name="List" type="text">List</button></div>
-  </form>
+    <div class="spacing"></div>
+
+    <div class="container">
+        <span class="rent"><a name="Rent" href="/homes" value="RENT HOME">RENT HOME</a></span>
+    </div>
+
+    <div class="container">
+        <span class="list"><a name="List" href="/list" value="LIST HOME">LIST HOME</a></span>
+    </div>
+
+  </body>
+
 </html>

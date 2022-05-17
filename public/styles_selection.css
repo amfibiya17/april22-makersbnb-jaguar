@@ -1,0 +1,237 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* background-image: url("https://i.postimg.cc/SNJR6sTf/Jacksonville-Jaguars-logo.png"); */
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+/* div {
+  border: 1px solid red;
+} */
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.homes a:before {
+  content: "HOMES";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.homes a:after{
+  position: absolute;
+  content: "HOMES";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.list_home a:before {
+  content: "LIST HOME";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.list_home a:after{
+  position: absolute;
+  content: "LIST HOME";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.profile a:before {
+  content: "PROFILE";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.profile a:after{
+  position: absolute;
+  content: "PROFILE";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.sign_out a:before {
+  content: "LOG OUT";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.sign_out a:after{
+  position: absolute;
+  content: "LOG OUT";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+a:link {
+  color: rgba(0,0,0,0);
+}
+
+a:visited {
+  color: rgba(0,0,0,0);
+}
+
+a:hover {
+  color: rgba(0,0,0,0);
+}
+
+a:active {
+  color: rgba(0,0,0,0);
+}
+
+a::content {
+  color: rgba(0,0,0,0);
+}
+
+span{
+  position: relative;
+  display: inline-flex;
+  width: 280px;
+  height: 85px;
+  margin: 0;
+  perspective: 1000px;
+}
+
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.rent a:before {
+  content: "RENT";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.rent a:after{
+  position: absolute;
+  content: "HOME";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.list a:before {
+  content: "LIST";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.list a:after{
+  position: absolute;
+  content: "HOME";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+span a:before{
+  color: #fff;
+  background: #5F9EA0;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after{
+  color: #5F9EA0;
+  transform: rotateX(100deg) translateZ(25px);
+}
+span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.spacing {
+  height: 35%;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
