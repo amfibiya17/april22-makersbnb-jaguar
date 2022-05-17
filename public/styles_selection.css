@@ -18,6 +18,16 @@ body {
   text-align: center;
 }
 
+.homes_overview {
+  width: 600px;
+  height: 20px;
+  padding: 50px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #5F9EA0;
+}
+
 .homes a:before {
   content: "HOMES";
   position: absolute;
