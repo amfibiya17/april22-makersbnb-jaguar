@@ -25,7 +25,7 @@ class App < Sinatra::Base
   end
 
   post '/selection' do
-
+    
   end
   
   # get '/list' do
@@ -40,6 +40,9 @@ class App < Sinatra::Base
     erb :homes
   end
 
+  get '/request' do
+    erb :request
+  end
   # post '/logout' do
   
   # end
