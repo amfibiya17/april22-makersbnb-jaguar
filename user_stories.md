@@ -28,11 +28,11 @@ I would like to be able to sign out<br>
 <br>
 As a user <br>
 So that I can list my home<br>
-I want to be able to name my space<br>
+I want to be able to name my home<br>
 <br>
 As a user <br>
 So that I can list my home<br>
-I want to give a short description of the space<br>
+I want to give a short description of the home<br>
 <br>
 As a user <br>
 So that I can list my home<br>
@@ -44,7 +44,7 @@ I want to select a range of available dates<br>
 <br>
 As a user <br>
 So I can navigate to a page to make a booking<br>
-I Want to access a page with available spaces/dates<br>
+I Want to access a page with available home/dates<br>
 
 As a user <br>
 So I can refine my search<br>
@@ -80,7 +80,7 @@ I want to be able to approve or deny a request<br>
 <br>
 As a user <br>
 So I know which home to book for my holiday<br>
-Unavailable dates should not appear
+Unavailable dates should not appear<br>
 <br>
 As a site administrator <br>
 To ensure choice and first come first serve<br>
