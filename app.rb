@@ -36,8 +36,8 @@ class App < Sinatra::Base
   #   redirect to '/selection'
   # end
   
-  get '/homes' do
-    erb :homes
+  get '/rent' do
+
   end
 
   # post '/logout' do
