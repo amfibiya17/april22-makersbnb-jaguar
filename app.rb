@@ -40,6 +40,9 @@ class App < Sinatra::Base
 
   # end
 
+  get '/request' do
+    erb :request
+  end
   # post '/logout' do
   
   # end

@@ -235,3 +235,56 @@ span a:hover{
   align-items: center;
   justify-content: center;
 }
+
+/* styles for request page */ 
+input[type=date] {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #282828;
+  font-size: 20px;
+  text-align: center;
+  line-height: 32px;
+  padding: 16px 24px;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.request a:before {
+  content: "REQUEST TO BOOK";
+  position: absolute;
+  height: 65px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  left: 17px;
+  /* border-radius: 5px; */
+}
+
+.request a:after{
+  position: absolute;
+  content: "REQUEST TO BOOK";
+  height: 65px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  left: 17px;
+  /* border-radius: 5px; */
+}
+
+.center {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.spacing1 {
+  height: 10%;
+}
