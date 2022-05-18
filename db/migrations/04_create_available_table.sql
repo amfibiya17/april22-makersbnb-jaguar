@@ -4,4 +4,3 @@ CREATE TABLE available (
   night timestamp
 );
 
-INSERT INTO available (home_id, night) VALUES (1, '2022-05-17');
