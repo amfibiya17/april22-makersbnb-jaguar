@@ -15,6 +15,7 @@ class App < Sinatra::Base
 
   post '/signup' do
     user = User.create(username: params[:username], password: params[:password], email: params[:email])
+    session[:user] = user
     redirect to '/selection'
   end
   
@@ -46,6 +47,7 @@ class App < Sinatra::Base
   end
 
   # post '/logout' do
+    # session[:user] = nil
     # redirect to '/login'
   # end
 
