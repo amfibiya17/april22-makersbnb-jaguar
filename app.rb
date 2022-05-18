@@ -1,21 +1,27 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/user'
 
 class App < Sinatra::Base
   enable :sessions
 
-  # get '/' do
-  #   redirect to '/signup'
-  # end
+  get '/' do
+    redirect to '/signup'
+  end
   
-  # get '/signup' do
-   
+  get '/signup' do
+   erb :signup
+  end
+
+  post '/signup' do
+    user = User.create(username: params[:username], password: params[:password], email: params[:email])
+    redirect to '/selection'
+  end
+  
+  # get '/login' do
+
   # end
 
-  # post '/signup' do
-  
-  # end
-  
   # post '/login' do
 
   # end
