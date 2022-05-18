@@ -18,13 +18,15 @@ class App < Sinatra::Base
     redirect to '/selection'
   end
   
-  # get '/login' do
-
-  # end
-
-  # post '/login' do
-
-  # end
+  get '/login' do
+    erb :login
+  end
+  
+  post '/login' do
+    user = User.login_find(username: params[:username], password: params[:password])
+    session[:user] = user
+    redirect to '/selection'
+  end
 
   get '/selection' do
     erb :selection
@@ -42,8 +44,9 @@ class App < Sinatra::Base
   get '/request' do
     erb :request
   end
+
   # post '/logout' do
-  
+    # redirect to '/login'
   # end
 
   get '/list' do

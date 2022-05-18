@@ -14,5 +14,6 @@ feature "Sign up" do
     
     expect(page).to have_button 'SIGN UP'
     click_button 'SIGN UP'
+    expect(page).to have_current_path('/selection')
   end
 end
