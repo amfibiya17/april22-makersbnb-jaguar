@@ -9,7 +9,7 @@ feature 'Selection page' do
     expect(page).to have_content "LIST HOME"
   end
 
-  scenario "user can go to homes page from selection page" do
+  xscenario "user can go to homes page from selection page" do
     visit('/selection')
     click_link 'HOMES'
     expect(page).to have_current_path('/homes')
