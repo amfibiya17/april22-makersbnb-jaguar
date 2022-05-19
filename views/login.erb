@@ -1,0 +1,24 @@
+<html>
+
+  <head>
+    <title>MakerBnB</title>
+    <link href="<%= url('/styles_selection.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+
+  <header>
+
+    <form action="/login" method="post">
+
+      <input type="text" placeholder="Enter Username" name="username" required />
+      
+      <input type="password" placeholder="Enter Password" name="password" required />
+
+      <input type="submit" name="LOG IN" />
+      <%# <button type="button" href="/selection">LOG IN</button> %>
+      
+    </form>
+
+  </header>
+
+
+</html>

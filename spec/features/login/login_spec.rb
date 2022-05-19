@@ -1,19 +1,24 @@
-feature "Sign up" do
+feature "Log in" do
   scenario 'checking behavior' do
-    visit('/signup')
+    visit('/login')
 
-    expect(page).to have_button "SIGN UP"
+    expect(page).to have_button "LOG IN"
   end
 
-  scenario 'user can sign up' do
+  scenario 'user can log in' do
     visit('/signup')
 
     fill_in :username, with: 'test_name'
     fill_in :password, with: '12345678'
     fill_in :email, with: 'test@email.com'
-    
-    expect(page).to have_button 'SIGN UP'
     click_button 'SIGN UP'
+
+    visit('/login')
+
+    fill_in :username, with: 'test_name'
+    fill_in :password, with: '12345678'
+    click_button "LOG IN"
+
     expect(page).to have_current_path('/selection')
   end
 end
