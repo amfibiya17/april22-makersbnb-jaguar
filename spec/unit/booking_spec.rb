@@ -54,4 +54,10 @@ describe Booking do
       expect(Booking.available?(home, night)).to eq false
     end
   end
+  describe '.request' do 
+    it 'requests a booking' do
+      #adds it to a table that we've not made yet
+
+    end
+  end
 end

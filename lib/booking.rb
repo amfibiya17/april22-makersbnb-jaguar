@@ -16,6 +16,8 @@ class Booking
 
   def self.approved(user, home, night)
     connection = PG.connect(dbname: "makersbnb_test")
+    # should also check if in the requests table and raise error if not
+    raise 'home not available' unless self.available?(home, night)
     connection.exec("INSERT INTO bookings (user_id, home_id, night) VALUES($1, $2, $3);", ["#{user.id}", "#{home[0]['id']}", night])
     connection.exec("DELETE FROM available WHERE home_id = #{home[0]['id']}")
   end
