@@ -8,16 +8,24 @@
   <header>
 
     <form action="/signup" method="post">
-      <input type="text" placeholder="Enter Username" name="username" required />
 
-      <input type="password" placeholder="Enter Password" name="password" required />
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form">
+            <input type="text" placeholder="Enter Username" name="username" required />
 
-      <input type="email" placeholder="Enter Email" name="email" required />
+            <input type="password" placeholder="Enter Password" name="password" required />
 
-      <input type="submit" name="SIGN UP" />
+            <input type="email" placeholder="Enter Email" name="email" required />
+
+            <a href="/selection" type="submit" name="LOG IN"><button>SIGN UP</button></a>
+            <p class="message">Already registered? <a href="/login">Log in</a></p>
+          </form>
+        </div>
+      </div>
+
     </form>
 
-    <a href="/login"><button>Log in</button></a>
   </header>
 
 
