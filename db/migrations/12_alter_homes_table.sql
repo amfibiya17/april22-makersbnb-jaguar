@@ -1,0 +1,1 @@
+ALTER TABLE homes RENAME user_id TO owner_id;
