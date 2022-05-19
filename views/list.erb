@@ -1,30 +1,55 @@
-<form action="/list" method="post">
-  <label for="name">
-  Add to the list of homes
-  <input type="text" name="name" placeholder="name of home">
-  </label>
-  <br><br>
-  <label for="description">
-  Add a description
-  <input type="text" name="description" placeholder="write a description">
-  </label>
-  <br><br>
-  <label for="price">
-  Add a price
-  <input type="text" name="price" placeholder="enter a price">
-  </label>
-  <br><br>
-  <label for="start_date">
-  Add a start date
-  <input type="text" name="start_date" placeholder="YYYY/MM/DD">
-  </label>
-  <label for="end_date">
-  Add an end date
-  <input type="text" name="end_date" placeholder="YYYY/MM/DD">
-  </label>
-  <input type="submit" value="Submit">
-</form>
+
+<html>
+
+  <head>
+    <title>MakerBnB</title>
+    <link href="<%= url('/styles_selection.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+
+  <header>
+
+    <div class="header">
+      <span class="homes"><a name="HOMES" type="text" href="/homes" value="HOMES">HOMES</a></span>
+      <span class="list_home"><a name="LIST A HOME" type="text" href="/list" value="LIST A HOME">LIST A HOME</a></span>
+      <span class="profile"><a name="PROFILE" type="text" href="/profile" value="PROFILE">PROFILE</a></span>
+      <span class="sign_out"><a name="SIGN OUT" type="text" href="/login" value="HOMES">SIGN OUT</a></span>
+    </div>
+      
+  </header>
 
 
+  <form action="/list" method="post">
 
+    <div class="list-page">
+      <div class="form_list">
+        <form class="login-form">
 
+          <label for="name">
+            Add to the list of homes
+            <input type="text" name="name" placeholder="Name of home" />
+          </label>
+
+          <label for="description">
+            Add a description
+            <input type="text" name="description" placeholder="Write a description" />
+          </label>
+
+          <label for="price">
+            Add a price
+            <input type="text" name="price" placeholder="Enter a price">
+          </label>
+
+          <label for="start_date">
+            Choose night
+            <input type="date" name="night" placeholder="YYYY/MM/DD">
+          </label>
+
+          <a href="/selection" type="submit" name="SUBMIT"><button>SUBMIT</button></a>
+        
+        </form>
+      </div>
+    </div>
+
+  </form>
+
+</html>

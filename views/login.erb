@@ -5,28 +5,22 @@
     <link href="<%= url('/styles_selection.css') %>" rel="stylesheet" type="text/css" />
   </head>
 
-  <header>
+  <body>
 
-    <form action="/signup" method="post">
-
+    <form action="/login" method="post">
       <div class="login-page">
         <div class="form">
           <form class="login-form">
             <input type="text" placeholder="Enter Username" name="username" required />
-
             <input type="password" placeholder="Enter Password" name="password" required />
-
-            <input type="email" placeholder="Enter Email" name="email" required />
-
-            <a href="/selection" type="submit" name="LOG IN"><button>SIGN UP</button></a>
-            <p class="message">Already registered? <a href="/login">Log in</a></p>
+            <a href="/selection" type="submit" name="LOG IN"><button>LOG IN</button></a>
+            <p class="message">Not registered? <a href="/signup">Create an account</a></p>
           </form>
         </div>
       </div>
-
     </form>
 
-  </header>
+  </body>
 
 
 </html>
