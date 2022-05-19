@@ -47,7 +47,7 @@ class App < Sinatra::Base
   end
 
   post '/logout' do
-    session[:user] = nil
+    p session[:user] = nil
     redirect to '/login'
   end
 
