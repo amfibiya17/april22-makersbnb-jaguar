@@ -46,10 +46,10 @@ class App < Sinatra::Base
     erb :request
   end
 
-  # post '/logout' do
-    # session[:user] = nil
-    # redirect to '/login'
-  # end
+  post '/logout' do
+    p session[:user] = nil
+    redirect to '/login'
+  end
 
   get '/list' do
     erb :list
@@ -58,7 +58,10 @@ class App < Sinatra::Base
   post '/list' do
     redirect to '/selection'
   end
-
+  
+  get '/profile' do
+    erb :profile
+  end
 
   run! if app_file == $0
 end
