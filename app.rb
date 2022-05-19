@@ -58,7 +58,10 @@ class App < Sinatra::Base
   post '/list' do
     redirect to '/selection'
   end
-
+  
+  get '/profile' do
+    erb :profile
+  end
 
   run! if app_file == $0
 end
