@@ -19,26 +19,25 @@
 <body>
   <div> 
     <div class="spacing1"></div>
-    <div class="center">Book your next stay</div>
-    <div class="homes_overview">
-      Stunning Beach House
-    </div>
-    <div class="homes_overview">
-      Lovely Downtown Penthouse
-    </div>
-    <div class="homes_overview">
-      Sunny Tree House
-    </div>
-    <div class="homes_overview">
-      Cosy Cottage
-    </div>
-     <div class="homes_overview">
-      Haunted House
-    </div>
-     <div class="homes_overview">
-      Laura's Castle
-    </div>
+
+    <div class="homes_header">Book your next stay</div>
+
+    <form action="/....." method="post">
+
+      <% @homes.each do |home| %>
+
+        <div class="homes_overview">
+        <%# needs to be a box %>
+          <div class="homes_title"><% home["name"] %></div>
+          <div class="homes_price"><% home["price"] %></div>
+          <div class="homes_description"><% home["description"] %></div>
+        </div>
+
+      <% end %>
+    </form>
   </div>
+
+
 
 
 </body>

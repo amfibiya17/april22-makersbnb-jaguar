@@ -33,17 +33,30 @@ class App < Sinatra::Base
     erb :selection
   end
 
-  post '/selection' do
-    
-  end
+  # post '/selection' do
+   
+  # end
 
   
   get '/homes' do
+    @homes = Home.all
     erb :homes
   end
 
+  post '/homes' do
+    @home = Home.select[name: params[:name], price: params[:price], description: params[:description]]
+    redirect to '/request'
+  end
+
   get '/request' do
+    @home = session[:home]
     erb :request
+  end
+
+  post '/request' do
+    session[:user] = user
+    @booking = Booking.request
+    redirect to '/profile'
   end
 
   post '/logout' do
