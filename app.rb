@@ -37,7 +37,6 @@ class App < Sinatra::Base
    
   # end
 
-  
   get '/homes' do
     @homes = Home.all
     erb :homes
@@ -55,7 +54,7 @@ class App < Sinatra::Base
 
   post '/request' do
     session[:user] = user
-    @booking = Booking.request
+    @booking = Booking.request 
     redirect to '/profile'
   end
 
