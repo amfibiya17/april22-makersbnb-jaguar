@@ -1,6 +1,6 @@
 class Booking
 
-  def make(user, home, night)
+  def self.check(home, night)
 
     connection = PG.connect(dbname: "makersbnb_test")
     
