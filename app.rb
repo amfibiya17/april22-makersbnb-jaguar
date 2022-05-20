@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/user'
+require './lib/home'
+
 
 class App < Sinatra::Base
   enable :sessions
@@ -30,12 +32,9 @@ class App < Sinatra::Base
   end
 
   get '/selection' do
+    @homes = Home.all
     erb :selection
   end
-
-  # post '/selection' do
-   
-  # end
 
   get '/homes' do
     @homes = Home.all
@@ -43,31 +42,32 @@ class App < Sinatra::Base
   end
 
   post '/homes' do
-    @home = Home.select[name: params[:name], price: params[:price], description: params[:description]]
+    session[:home] = Home.select(id: params[:id])
     redirect to '/request'
   end
 
   get '/request' do
-    @home = session[:home]
+    @home = Home.select(id: params[:id])
     erb :request
   end
 
   post '/request' do
-    session[:user] = user
     @booking = Booking.request 
     redirect to '/profile'
   end
 
   post '/logout' do
-    p session[:user] = nil
+    session[:user] = nil
     redirect to '/login'
   end
 
   get '/list' do
+    @homes = Home.all
     erb :list
   end
 
   post '/list' do
+    Home.create(home_name: params[:home_name], description: params[:description], price: params[:price], owner_id: session[:user].id)
     redirect to '/selection'
   end
   

@@ -6,9 +6,9 @@ body {
   background-position: center center;
 }
 
-/* div {
+div {
   border: 1px solid red;
-} */
+}
 
 .header {
   position: -webkit-sticky;
@@ -16,6 +16,36 @@ body {
   top: 0px;
   width: 100%;
   text-align: center;
+}
+
+.spacing2 {
+  height: 2%;
+}
+
+.home_request a:before {
+  content: "REQUEST";
+  position: absolute;
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+}
+
+.home_request a:after{
+  position: absolute;
+  content: "HOME";
+  height: 65px;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #5F9EA0;
+  box-sizing: border-box;
+  /* border-radius: 5px; */
 }
 
 .homes_header {
@@ -27,7 +57,7 @@ body {
 
 .homes_overview {
   width: 700px;
-  height: 100px;
+  height: auto;
   padding: 15px;
   margin: 20px;
   margin-left: auto;
@@ -36,7 +66,7 @@ body {
 }
 
 .homes_title {
-  width: 550px;
+  width: 650px;
   text-align: left;
   font-size: 19px;
   font-family: 'Montserrat', sans-serif;
@@ -46,8 +76,21 @@ body {
 }
 
 .homes_description {
-  width: 550px;
-  height: 60px;
+  width: 650px;
+  height: auto;
+}
+
+.button {
+  background-color: #5F9EA0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .homes a:before {
@@ -155,23 +198,23 @@ body {
 }
 
 a:link {
-  color: rgba(0,0,0,0);
+  color: rgba(255, 255, 255, 0);
 }
 
 a:visited {
-  color: rgba(0,0,0,0);
+  color: rgba(255, 255, 255, 0);
 }
 
 a:hover {
-  color: rgba(0,0,0,0);
+  color: rgba(255, 255, 255, 0);
 }
 
 a:active {
-  color: rgba(0,0,0,0);
+  color: rgba(255, 255, 255, 0);
 }
 
 a::content {
-  color: rgba(0,0,0,0);
+  color: rgba(255, 255, 255, 0);
 }
 
 span{
@@ -272,6 +315,16 @@ span a:hover{
 }
 
 /* styles for request page */ 
+.request_title {
+
+  text-align: center;
+  font-size: 29px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 10px;
+}
+
 input[type=date] {
   background-color: rgb(255, 255, 255);
   border: 3px solid #282828;
@@ -489,3 +542,4 @@ input[type=date] {
 .form_list .register-form {
   display: none;
 }
+
