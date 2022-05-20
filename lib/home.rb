@@ -16,12 +16,13 @@ class Home
     return result.first
   end
   
-  def self.create(home_name:, description:, price:, owner_id:)
+  def self.create(home_name:, description:, price:, owner_id:, night:)
     connection = pg_connection
-    connection.exec_params(
-      "INSERT INTO homes (home_name, description, price, owner_id) VALUES($1, $2, $3, $4);",
+    home = connection.exec_params(
+      "INSERT INTO homes (home_name, description, price, owner_id) VALUES($1, $2, $3, $4) RETURNING id, home_name;",
         [home_name, description, price, owner_id]
     )
+    connection.exec("INSERT INTO available (home_id, night) VALUES($1, $2);", ["#{home[0]['id']}", night])
     connection.close
   end
 
