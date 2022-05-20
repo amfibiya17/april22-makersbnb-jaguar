@@ -35,9 +35,9 @@ class Booking
     available[0]['case'] == "TRUE" ? true : false
   end
 
-  def self.request(renter, home, night)
+  def self.request(renter, home_id, night)
     connection = pg_connection      # should also check if in the requests table and raise error if not
-    connection.exec("INSERT INTO requests (renter_id, home_id, night) VALUES($1, $2, $3);", ["#{renter.id}", "#{home[0]['id']}", night])
+    connection.exec("INSERT INTO requests (renter_id, home_id, night) VALUES($1, $2, $3);", ["#{renter.id}", "#{home_id}", night])
   end
 
   def self.request_check?(home, night)
