@@ -6,9 +6,9 @@ body {
   background-position: center center;
 }
 
-div {
+/* div {
   border: 1px solid red;
-}
+} */
 
 .header {
   position: -webkit-sticky;
