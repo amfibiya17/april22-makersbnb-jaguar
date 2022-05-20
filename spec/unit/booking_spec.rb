@@ -70,7 +70,7 @@ describe Booking do
       #insert some data into the available table
       connection.exec("INSERT INTO available (home_id, night) VALUES($1, $2);", ["#{home[0]['id']}", night])
       expect(Booking.available?(home, night)).to eq true
-      Booking.request(user, home, night)
+      Booking.request(user, home[0]['id'], night)
       expect(Booking.request_check?(home, night)).to eq true
     end
   end
@@ -97,8 +97,8 @@ describe Booking do
       connection.exec("INSERT INTO available (home_id, night) VALUES($1, $2);", ["#{home2[0]['id']}", night2])
       expect(Booking.available?(home, night)).to eq true
       expect(Booking.available?(home2, night2)).to eq true
-      Booking.request(user, home, night)
-      Booking.request(user2, home2, night2)
+      Booking.request(user, home[0]['id'], night)
+      Booking.request(user2, home2[0]['id'], night2)
       Booking.request_all
       expect(Booking.request_all[0]['home_id']).to include home[0]['id']
     end
