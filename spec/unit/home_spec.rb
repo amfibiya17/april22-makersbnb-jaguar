@@ -20,9 +20,10 @@ describe Home do
 
   describe '.create' do
     it 'creates a new home' do
+      night = '2022-05-16'
       connection = PG.connect(dbname: 'makersbnb_test')
       connection.exec("INSERT INTO users (id, username, password, email) VALUES ('45', 'Slava', 'testpassword1', 'test@email.com');")
-      Home.create(home_name: 'Paradise house', description: 'Description is here', price: '500', owner_id: '45')
+      Home.create(home_name: 'Paradise house', description: 'Description is here', price: '500', owner_id: '45', night: night)
       
       home = Home.all[0]
 
@@ -30,6 +31,15 @@ describe Home do
       expect(home['description']).to eq 'Description is here'
       expect(home['price']).to eq '500'
       expect(home['owner_id']).to eq '45'
+      test = connection.exec("SELECT * FROM available")
+      p test[0]
+      available = connection.exec("SELECT CASE WHEN EXISTS 
+        (
+        SELECT * FROM available WHERE home_id = 1 AND night = '#{night}')
+        THEN 'TRUE'
+        ELSE 'FALSE'
+        END;")
+      expect(available[0]['case']).to eq "TRUE"
     end
   end
 
