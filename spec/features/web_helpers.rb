@@ -28,6 +28,10 @@ def request
   click_link "REQUEST TO BOOK"
 end
 
-def list
-
+def list_home
+  fill_in :home_name, with: "Name"
+  fill_in :description, with: "A lovely apartment"
+  fill_in :price, with: "30"
+  fill_in :night, with: "2022/05/18"
+  click_link "SUBMIT"
 end

@@ -2,9 +2,11 @@ feature 'Request page' do
   scenario 'Choosing night' do
     signup
     login
-    homes
+    
+    selection_homes
+    list_home
+    visit('/request?id=1')
 
-    visit('/request')
     expect(page).to have_content "HOMES"
     expect(page).to have_content "LIST A HOME"
     expect(page).to have_content "PROFILE"

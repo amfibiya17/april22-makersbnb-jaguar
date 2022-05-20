@@ -1,43 +1,42 @@
 <html>
 
-<head>
-  <title>MakerBnB</title>
-  <link href="<%= url('/styles_selection.css') %>" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <title>MakerBnB</title>
+    <link href="<%= url('/styles_selection.css') %>" rel="stylesheet" type="text/css" />
+  </head>
 
-<header>
+  <header>
 
-  <div class="header">
-    <span class="homes"><a name="HOMES" type="text" href="/homes" value="HOMES">HOMES</a></span>
-    <span class="list_home"><a name="LIST A HOME" type="text" href="/list" value="LIST A HOME">LIST A HOME</a></span>
-    <span class="profile"><a name="PROFILE" type="text" href="/profile" value="PROFILE">PROFILE</a></span>
-    <span class="sign_out"><a name="SIGN OUT" type="text" href="/login" value="HOMES">SIGN OUT</a></span>
-  </div>
-    
-</header>
+    <div class="header">
+      <span class="homes"><a name="HOMES" type="text" href="/homes" value="HOMES">HOMES</a></span>
+      <span class="list_home"><a name="LIST A HOME" type="text" href="/list" value="LIST A HOME">LIST A HOME</a></span>
+      <span class="profile"><a name="PROFILE" type="text" href="/profile" value="PROFILE">PROFILE</a></span>
+      <span class="sign_out"><a name="SIGN OUT" type="text" href="/login" value="HOMES">SIGN OUT</a></span>
+    </div>
+      
+  </header>
 
-<body>
-  <div> 
-    <div class="spacing1"></div>
+  <body>
+    <div>
 
-    <div class="homes_header">Book your next stay</div>
+      <div class="spacing1"></div>
 
-    <form action="/....." method="post">
+      <div class="homes_header">Book your next stay</div>
 
       <% @homes.each do |home| %>
 
-        <div class="homes_overview">
-        <%# needs to be a box %>
-          <div class="homes_title"><% home["name"] %></div>
-          <div class="homes_price"><% home["price"] %></div>
-          <div class="homes_description"><% home["description"] %></div>
+        <div class="homes_overview" >
+          <div class="homes_title"><%= home["home_name"] %></div>
+          <div class="homes_price">£<%= home["price"] %> a night</div>
+          <br>
+          <div class="homes_description"><%= home["description"] %></div>
+          <div class="spacing2"></div>
+          <span class="home_request"><a name="REQUEST" type="text" href="/request?id=<%= home["id"]%>" value="REQUEST">REQUEST</a></span>
         </div>
 
       <% end %>
-    </form>
-  </div>
 
+    </div>
+  </body>
 
-
-
-</body>
+</html>
