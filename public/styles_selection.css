@@ -6,6 +6,7 @@ body {
   background-position: center center;
 }
 
+
 /* div {
   border: 1px solid red;
 } */
@@ -541,5 +542,112 @@ input[type=date] {
 }
 .form_list .register-form {
   display: none;
+}
+
+.profile_title{
+  text-align: center;
+  font-size: 29px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: black;
+  margin-top: 90px;
+  margin-bottom: 70px;
+}
+
+.profile_request {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile_column0 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  flex: 1;
+  align-self: flex-start;
+  background-color: #5f9ea03d;
+}
+
+.profile_column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  flex: 1;
+  align-self: flex-start;
+  background-color: #5f9ea03d;
+  /* padding-left: 0.5%;
+  padding-right: 0.5%; */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.profile_column1 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  flex: 1;
+  align-self: flex-start;
+  /* background-color: #5f9ea03d; */
+  /* padding-left: 0.5%;
+  padding-right: 0.5%; */
+}
+
+.profile_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profile_row1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.profile_open {
+  width: 70%;
+  height: 10px;
+  padding: 20px;
+  margin: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-bottom: 40px; */
+  
+  border: 6px solid #5F9EA0;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  /* font-weight: bold; */
+  color: black;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.profile_header {
+  width: 80%;
+  height: 20px;
+  padding: 0px;
+  /* margin: 5px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+.profile_left {
+  margin-right: 10%;
 }
 
